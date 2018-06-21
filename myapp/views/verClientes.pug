@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1(style="margin-left: 28%;margin-right: 28%;")= title
+  br
+  form(action="menu")
+   div
+     table(class="table table-stripped" style="width: 70%;margin-left: 16%;margin-right: 16%;")
+         tr
+             th Nombre
+             th Apellidos
+             th Correo
+             th Membresia
+         - for(var i=0;i<clientes.length;i++)
+             tr
+               td= clientes[i].nombre
+               td= clientes[i].apellidos
+               td= clientes[i].correo
+               td= clientes[i].membresia
+     input(type="submit" value="Menu" class="btn btn-secondary" style="margin-left: 17%;")

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1(style="margin-left: 34%;margin-right: 34%;")= title
+  br
+  form(method="POST" name="form" id="form" style="width: 30%;margin-left: 34%;margin-right: 34%" action="registro")
+    div(class="form-group")
+       label(for="nombre") Nombre
+       input(id="nombre" type="text" class="form-control" name="campo1")
+    div(class.form-group)
+        label(for="apellidos") Apellidos
+        input(id="apellidos" type="text" class="form-control" name="campo2")
+    div(class="form-group")
+        label(for="correo") Correo
+        input(id="correo" type="text" class="form-control" name="campo3")
+    div(class="form-group")
+        label(for="membresia") Membresia
+        select(id="membresia" class="form-control" name="campo4")
+            option(value="Normal") Normal
+            option(value="Premium") Premium 
+    input(type="submit" value="Registrar" class="btn btn-primary")

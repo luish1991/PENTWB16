@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1(style="margin-left: 35%;margin-right: 35%;")= title
+  br
+  form(action="registrar" style="margin-left: 42%;margin-right: 42%")
+    input(type="submit" value="Registrar Cliente" class="btn btn-primary")
+  br
+  form(action="ver" style="margin-left: 42%;margin-right: 42%")
+    input(type="submit" value="Ver Clientes" class="btn btn-info")
+  br
+  form(action="eliminar" style="margin-left: 42%;margin-right: 42%")
+    input(type="submit" value="Borrar Cliente" class="btn btn-danger")
+  br
+

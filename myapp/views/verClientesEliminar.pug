@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1(style="margin-left: 28%;margin-right: 28%;")= title
+  br
+  form(action="eliminacion" method="post")
+   div
+     table(class="table table-stripped" style="width: 70%;margin-left: 16%;margin-right: 16%;")
+         tr
+             th Nombre
+             th Apellidos
+             th Correo
+             th Membresia
+         - for(var i=0;i<clientes.length;i++)
+             tr
+               td= clientes[i].nombre
+               td= clientes[i].apellidos
+               td= clientes[i].correo
+               td= clientes[i].membresia
+               td
+                 input(type="submit" onclick="asignar('"+clientes[i].correo+"')" value="Eliminar" class="btn btn-danger")
+     input(type="hidden" id="campo1" name="campo1" value="#")
+  form(action="menu")
+     input(type="submit" value="Menu" class="btn btn-secondary" style="margin-left: 17%;")
+  script(src='/javascripts/funciones.js')
